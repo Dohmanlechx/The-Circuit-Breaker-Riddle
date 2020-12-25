@@ -44,7 +44,7 @@ class TheCircuitBreakerRiddle(val amountOfLamps: Int) {
     }
 
     private fun generateBreakersAndLamps() {
-        for (i in 0 until amountOfLamps) {
+        repeat(amountOfLamps) {
             UUID.randomUUID().toString().let { id ->
                 lamps.add(Socket(id))
                 breakers.add(Socket(id))
